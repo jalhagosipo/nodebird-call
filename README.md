@@ -16,3 +16,7 @@ CLIENT_SECRET=(xxx)
 
 ## v0.2
 - post, hashtag api를 가져오기위한 /mypost, /search/:hashtag 추가
+
+## v0.3
+- const URL = 'http://localhost:3001/v2';로 변경하지않고 v1을 사용하면 deprecated된 nodebird-api를 호출해 에러가 난다.
+- nodebird-api의 v0.4와 실행하면 된다.
