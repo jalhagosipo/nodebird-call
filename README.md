@@ -20,3 +20,8 @@ CLIENT_SECRET=(xxx)
 ## v0.3
 - const URL = 'http://localhost:3001/v2';로 변경하지않고 v1을 사용하면 deprecated된 nodebird-api를 호출해 에러가 난다.
 - nodebird-api의 v0.4와 실행하면 된다.
+
+## v1.0
+- 앞서 call서버에서 api서버로 api를 호출했다. call프론트에서 api서버를 호출해보자
+    - 클라이언트에서 바로 3001(nodebird-api)로 요청하면, 클라이언트와 서버의 도메인이 일치하지않아 요청이 차단된다. = CORS(cross-origin resource sharing) 문제
+    - 이 문제를 해결하려면 응답헤더에 Access-Control-Allow-Origin이라는 헤더를 넣어줘야한다. 이 헤더는 클라이언트 도메인의 요청을 허락하겠다는 뜻을 갖고 있다. 따라서 nodebird-api에 cors모듈을 설치해야 한다.
